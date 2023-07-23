@@ -7,6 +7,11 @@
     <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
 <style>
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
     .container{
         height: 100vh;
         width: 100vw;
@@ -27,6 +32,22 @@
         
     }
 
+    
+    .cards:hover::before {
+        left: 0px; /* Move the overlay to the right edge of the card */
+    }
+
+    .cards::before {
+        content: "";
+        position:absolute;
+        top:100px;
+        left: -50px;
+        width: 700px;
+        height: 450px;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+        transition: left 5s ease; /* Add transition for smooth animation */
+    }
+
     .leftbox{
         height: 100%;
         width: 80%;
@@ -35,6 +56,7 @@
         flex-direction: column;
         align-items:center;
        justify-content: space-between;
+       /* gap: 25px; */
        
         
         
@@ -43,22 +65,30 @@
         margin: 50px;
         font-size: large;
         color: azure;
+        margin-bottom: inherit;
+        /* gap: 25px; */
+        
+    }
+    .textbox{
+        margin: 50px;
+    text-align: center;
+    font-size: large;
+    color: azure;
 
     }
 
     .left{
+        height: 27%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         /* align-items: center; */
-        justify-content: space-between;
+        justify-content:space-around;
         color: azure;
         
     }
 
-    .left1{
-        margin-top: auto;
-        
-    }
+    
 
     .rightbox img{
         height: 100%;
@@ -74,9 +104,10 @@
         <div class="leftbox">
              <div class="heading">
                 <h2>Get insight that help your business grow </h2>
+             </div>
+             <div class="textbox">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eos autem maxime quo quia dignissimos magnam, corrupti laborum tempora vel!</p>
              </div>
-             
              <div class="left">
                 <div class="left1">
                     <p>10K+</p>
